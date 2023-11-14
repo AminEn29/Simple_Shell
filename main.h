@@ -10,8 +10,21 @@
 #include <sys/stat.h>
 #include <error.h>
 #include <fcntl.h>
+#include <stdarg.h>
 
 extern char **environ;
+
+/**
+ * struct BuiltInCmd- struct declaration
+ * @cmd: command
+ * @fun: the function
+*/
+typedef struct BuiltInCmd
+{
+	char *cmd;
+	void (*fun)(char **cmd, int *status);
+} BuiltInCmd;
+
 
 char *cmd_line(void);
 char **split_command(char *line);
@@ -37,5 +50,9 @@ char *wach_kayn(char *cmd);
 char *handel_env(char *var);
 char *find_in_path(char *cmd, char *path_env);
 
+int ilakan_builtin(char *cmd, struct BuiltInCmd built[]);
+void handel_builtin(char **cmd, int *status, struct BuiltInCmd built[]);
+void exit_program(char **cmd, int *status);
+void print_env(char **cmd, int *status);
 
 #endif
