@@ -7,14 +7,8 @@
 */
 char **split_command(char *line)
 {
-	char *token = NULL;
-
-	char **command = NULL;
-
-	char *cpline = NULL;
-
+	char *token = NULL, **command = NULL, *cpline = NULL;
 	int i = 0;
-
 	int size = 0;
 
 	size = count_tokens(line);
