@@ -5,4 +5,4 @@ Simple Shell is a small Unix shell that is capable of running basic Unix command
 
 Our shell is capable of doing All basics command like the BASH shell like cd and pwd and ls.
 
-We thans ALX for this oportinutiy that give as to work in this project and test and improve our skills.
+We express our gratitude to ALX for providing us with the opportunity to contribute to this project, allowing us to rigorously test and enhance our technical capabilities.
